@@ -4,10 +4,22 @@ const fs = require('fs');
 inquirer
   .prompt([
     {
-      type: "input",
-      message: "What is the title of your project?",
-      name: "title",
+      type: "checkbox",
+      message: "Lets make up Table of Content",
+      name: "content",
+      choices: ["- [Description](#description)",
+      "- [Installation](#installation)",
+      "- [Usage](#usage)",
+      "- [License](#license)",
+      "- [Contributing](#contributing)",
+      "- [Tests](#tests)",
+      "- [Questions](#questions)"],
     },
+    {
+        type: "input",
+        message: "Give some instructions on your project instalation process",
+        name: "instalation",
+      },
     {
       type: "input",
       message: "Describe your project",
@@ -24,7 +36,7 @@ inquirer
         name: "usage",
     },
     {
-        type: "list",
+        type: "checkbox",
         message: "Chose the license type if there is any ",
         name: "ilicense",
         choices:["MIT License",
@@ -40,7 +52,8 @@ inquirer
         "Creative Commons Zero v1.0 Universal",
         "GNU General Public License v2.0",
         "GNU Lesser General Public License v3.0",
-        "Do What The F*ck You Want To Public License",]
+        "Do What The F*ck You Want To Public License",
+        "None"],
 
       },
       {
