@@ -2,7 +2,7 @@
 
 ## Description
 
-Professional in terminal(node environment/JS) README.md generator.
+Professional in-terminal(node environment/JS) README.md generator.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ Professional in terminal(node environment/JS) README.md generator.
 Clone repository to your local machine. 
 Open repo root folder in your text editor(vs code or other).
  open index.js file in the terminal.
-Initialize your new Node.js project and instal inquirer packages by runnint in terminal,
+Initialize your new Node.js project and instal inquirer packages by running in terminal,
  npm init -y, npm install inquirer@8.2.4 . 
  
 
@@ -27,8 +27,8 @@ Initialize your new Node.js project and instal inquirer packages by runnint in t
 
 Follow prompts in the terminal, type in your answers.
  Check .txt file.
- Copy/Paste the text or export the file.
- Enjoy readme document you've just created.
+ Copy/Paste readme content to your document.
+ Congrats, hope that was helpful.
 
 ## License
 
