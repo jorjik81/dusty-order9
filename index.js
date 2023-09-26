@@ -38,7 +38,7 @@ inquirer
     {
         type: "checkbox",
         message: "Chose the license type if there is any ",
-        name: "ilicense",
+        name: "license",
         choices:["MIT License",
         "GNU General Public License v3.0",
         "Apache License 2.0",
@@ -80,10 +80,7 @@ inquirer
   ])
   .then((response) => {
     console.log(response);
-    response.confirm === response.password
-      ? console.log("Success!")
-      : console.log("You forgot your password already?!");
-
+    
       exportToMarkdown(response);
   });
   
@@ -92,7 +89,18 @@ inquirer
 function exportToMarkdown(response) {
   let markdown = '## User response\n\n';
   for (const key in response) {
-    markdown += `## ${key}\n ${response[key]}\n\n`;
+    markdown += `### ${key}\n`; 
+    
+    if (Array.isArray(response[key])) {
+    response[key].forEach((choice) => {
+      markdown += `- ${choice}\n`;
+    });
+  } else {
+
+    markdown += `${response[key]}\n\n`;
+    
+  }
+  markdown += '\n';  
   }
 
   // Save the Markdown content to a file
